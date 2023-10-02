@@ -1,7 +1,9 @@
 package hw5task2;
 
 public interface Recordable {
-    void record();
+    default void record() {
+        System.out.println("Player starts recording.");
+    }
     void pause();
     void stop();
 }

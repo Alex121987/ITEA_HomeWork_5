@@ -4,7 +4,12 @@ public class Player implements Playable, Recordable {
 
     @Override
     public void play() {
-        System.out.println("Player starts playing.");
+        Playable.super.play();
+    }
+
+    @Override
+    public void record() {
+        Recordable.super.record();
     }
 
     @Override
@@ -15,10 +20,5 @@ public class Player implements Playable, Recordable {
     @Override
     public void stop() {
         System.out.println("Current action is stopped.");
-    }
-
-    @Override
-    public void record() {
-        System.out.println("Player starts recording.");
     }
 }

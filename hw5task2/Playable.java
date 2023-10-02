@@ -1,7 +1,9 @@
 package hw5task2;
 
 public interface Playable {
-    void play();
+    default void play() {
+        System.out.println("Player starts playing.");
+    }
     void pause();
     void stop();
 }
