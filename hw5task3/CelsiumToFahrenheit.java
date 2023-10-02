@@ -1,9 +1,9 @@
 package hw5task3;
 
-public class CelsiumToFahrenheit implements ConverterTemperature {
+public class CelsiumToFahrenheit extends ConverterTemperature {
 
     @Override
     public double convert(double t) {
-        return t * 1.8 + 32;
+        return t * fahrenheitConstant1 + fahrenheitConstant2;
     }
 }

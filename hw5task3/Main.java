@@ -12,7 +12,7 @@ public class Main {
         ConverterTemperature converterCF = new CelsiumToFahrenheit();
         ConverterTemperature converterCK = new CelsiumToKelvin();
 
-        System.out.println(converterCF.convert(30));
+        System.out.println(converterCF.convert(25));
         System.out.println(converterCK.convert(30));
     }
 }
