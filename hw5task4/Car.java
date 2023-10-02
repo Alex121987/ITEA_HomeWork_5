@@ -8,10 +8,14 @@ public class Car {
     private final int yearOfManufacture = 1967;
 
     public Car(String model, double power, int speed, double price) {
-        this.model = model;
-        this.power = power;
-        this.speed = speed;
-        this.price = price;
+        if( (power >= 0 && power <= 200) && (speed >= 0 && speed <= 320) && (price >= 0 && price <= 50_000)) {
+            this.model = model;
+            this.power = power;
+            this.speed = speed;
+            this.price = price;
+        } else {
+            throw new IllegalArgumentException("Wrong input data!!!");
+        }
     }
 
     public String getModel() {
