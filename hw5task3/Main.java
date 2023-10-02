@@ -9,8 +9,8 @@ package hw5task3;
  */
 public class Main {
     public static void main(String[] args) {
-        CelsiumToFahrenheit converterCF = new CelsiumToFahrenheit();
-        CelsiumToKelvin converterCK = new CelsiumToKelvin();
+        ConverterTemperature converterCF = new CelsiumToFahrenheit();
+        ConverterTemperature converterCK = new CelsiumToKelvin();
 
         System.out.println(converterCF.convert(30));
         System.out.println(converterCK.convert(30));
