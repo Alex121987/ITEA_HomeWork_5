@@ -30,20 +30,24 @@ package hw5task4;
  */
 public class Main {
     public static void main(String[] args) {
-        Car Ford        = new Car("Ford Focus", 100, 190, 20_000);
-        Car Mitsuishi   = new Car("Mitsubishi Lancer Evo", 200, 200, 15_000);
-        Car Toyota      = new Car("Toyota Corolla", 120, 220, 13_000);
-        Car Kia         = new Car("Kia Sorrento", 150, 210, 16_000);
+        try {
+            Car ford = new Ford("Ford Focus", 100, 190, 20_000);
+            Car mitsubishi = new Mitsubishi("Mitsubishi Lancer Evo", 200, 200, 15_000);
+            Car toyota = new Toyota("Toyota Corolla", 120, 220, 13_000);
+            Car kia = new Kia("Kia Sorrento", 150, 210, 16_000);
 
-        CarInfo listOfCars = new CarInfo();
+            CarInfo listOfCars = new CarInfo();
 
-        listOfCars.addCar(Ford);
-        listOfCars.addCar(Mitsuishi);
-        listOfCars.addCar(Toyota);
-        listOfCars.addCar(Kia);
+            listOfCars.addCar(ford);
+            listOfCars.addCar(mitsubishi);
+            listOfCars.addCar(toyota);
+            listOfCars.addCar(kia);
 
-        System.out.println("Fastest Car: \n" + listOfCars.getFastestCar() + "\n");
-        System.out.println("Most Expensive Car: \n" + listOfCars.getMostExpensiveCar() + "\n");
-        System.out.println("Most Powerful Car: \n" + listOfCars.getMostPowerfulCar() + "\n");
+            System.out.println("Fastest Car: \n" + listOfCars.getFastestCar() + "\n");
+            System.out.println("Most Expensive Car: \n" + listOfCars.getMostExpensiveCar() + "\n");
+            System.out.println("Most Powerful Car: \n" + listOfCars.getMostPowerfulCar() + "\n");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Some of the parameters is wrong!");
+        }
     }
 }

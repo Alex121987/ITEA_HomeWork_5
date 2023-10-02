@@ -1,6 +1,6 @@
 package hw5task4;
 
-public class Car {
+public abstract class Car {
     private String model;
     private double power;
     private int speed;
