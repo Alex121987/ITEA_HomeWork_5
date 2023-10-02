@@ -15,9 +15,9 @@ package hw5task1;
 
 public class Main {
     public static void main(String[] args) {
-        XMLHandler xmlHandler = new XMLHandler();
-        TXTHandler txtHandler = new TXTHandler();
-        DOCHandler docHandler = new DOCHandler();
+        AbstractHandler xmlHandler = new XMLHandler();
+        AbstractHandler txtHandler = new TXTHandler();
+        AbstractHandler docHandler = new DOCHandler();
 
         xmlHandler.create();
         xmlHandler.open();
