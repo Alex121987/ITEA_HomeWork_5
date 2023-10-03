@@ -13,24 +13,37 @@ public class CarInfo {
     }
 
     public Car getMostExpensiveCar() {
-        PriceComparator comparator = new PriceComparator();
-        carList.sort(comparator);
-        return carList.get(carList.size()-1);
+        Car mostExpCar = carList.get(0);
+        for (Car car: carList) {
+            if (car.getPrice() > mostExpCar.getPrice()) {
+                mostExpCar = car;
+            }
+        }
+        return mostExpCar;
     }
 
     public Car getFastestCar() {
-        SpeedComparator comparator = new SpeedComparator();
-        carList.sort(comparator);
-        return carList.get(carList.size()-1);
+        Car fastestCar = carList.get(0);
+        for (Car car: carList) {
+            if (car.getSpeed() > fastestCar.getSpeed()) {
+                fastestCar = car;
+            }
+        }
+        return fastestCar;
     }
 
     public Car getMostPowerfulCar() {
-        PowerComparator comparator = new PowerComparator();
-        carList.sort(comparator);
-        return carList.get(carList.size()-1);
+        Car mostPowerfulCar = carList.get(0);
+        for (Car car: carList) {
+            if (car.getPower() > mostPowerfulCar.getPower()) {
+                mostPowerfulCar = car;
+            }
+        }
+        return mostPowerfulCar;
     }
 }
 
+/*
 class SpeedComparator implements Comparator<Car> {
     public int compare(Car car1, Car car2) {
         if (car1.getSpeed() == car2.getSpeed()) {
@@ -72,3 +85,5 @@ class PowerComparator implements Comparator<Car> {
         }
     }
 }
+
+*/

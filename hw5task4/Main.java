@@ -31,10 +31,10 @@ package hw5task4;
 public class Main {
     public static void main(String[] args) {
         try {
-            Car ford = new Ford("Ford Focus", 100, 190, 20_000);
-            Car mitsubishi = new Mitsubishi("Mitsubishi Lancer Evo", 200, 200, 15_000);
-            Car toyota = new Toyota("Toyota Corolla", 120, 220, 13_000);
-            Car kia = new Kia("Kia Sorrento", 150, 210, 16_000);
+            Car ford =          new Ford("Ford Focus",                  100, 190, 20_000);
+            Car mitsubishi =    new Mitsubishi("Mitsubishi Lancer Evo", 200, 330, 15_000);
+            Car toyota =        new Toyota("Toyota Corolla",            120, 220, 13_000);
+            Car kia =           new Kia("Kia Sorrento",                 150, 210, 16_000);
 
             CarInfo listOfCars = new CarInfo();
 
@@ -47,7 +47,14 @@ public class Main {
             System.out.println("Most Expensive Car: \n" + listOfCars.getMostExpensiveCar() + "\n");
             System.out.println("Most Powerful Car: \n" + listOfCars.getMostPowerfulCar() + "\n");
         } catch (IllegalArgumentException e) {
-            System.out.println("Some of the parameters is wrong!");
+            System.out.println("""
+                    Wrong Car-constructor arguments in method 'main'!
+                    Check parameters in Car-constructors.\s
+                     Correct parameters:\s
+                     power - 0.0 to 200.0
+                     speed - 0 to 320
+                     price - 0.0 to 50000.0
+                    Try to enter correct parameters of constructors.""");
         }
     }
 }
